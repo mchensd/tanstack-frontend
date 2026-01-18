@@ -1,6 +1,8 @@
+import { RouterClient } from "@tanstack/react-router/ssr/client";
+import { createRouter } from "./router.js";
 import { hydrateRoot } from "react-dom/client";
-import { App } from "./App.js";
 
-const root = document.getElementById("app")!;
+const router = createRouter();
 
-hydrateRoot(root, <App />);
+console.log("hydrating");
+hydrateRoot(document, <RouterClient router={router} />);
