@@ -44,7 +44,10 @@ const clientBuildConfig: BuildEnvironmentOptions = {
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => {
   return {
-    plugins: [tanstackRouter({ target: "react" }), react()],
+    plugins: [
+      tanstackRouter({ target: "react", autoCodeSplitting: true }),
+      react(),
+    ],
     build: configEnv.isSsrBuild ? ssrBuildConfig : clientBuildConfig,
   };
 });
