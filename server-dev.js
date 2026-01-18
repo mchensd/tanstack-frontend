@@ -50,7 +50,7 @@ app.use("*all", async (req, res, next) => {
     //     `render` function calls appropriate framework SSR APIs,
     //    e.g. ReactDOMServer.renderToString()
     render({ req, res, head: viteHead });
-  } catch (e: any) {
+  } catch (e) {
     // If an error is caught, let Vite fix the stack trace so it maps back
     // to your actual source code.
     vite.ssrFixStacktrace(e);

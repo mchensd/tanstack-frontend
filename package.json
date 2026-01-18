@@ -7,7 +7,7 @@
     "node": "24.12.0"
   },
   "scripts": {
-    "dev": "yarn typecheck && nodemon server-dev.ts",
+    "dev": "nodemon server-dev.js",
     "preview": "yarn typecheck && nodemon server-prod.ts",
     "typecheck": "tsc",
     "build:all": "yarn typecheck && yarn build:client && yarn build:server",
